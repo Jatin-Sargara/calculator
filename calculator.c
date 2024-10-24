@@ -1,4 +1,12 @@
 #include <stdio.h>
+int inverse(int x) {
+    if (x == 0) {
+        printf("Error: Division by zero\n");
+        return 0; // Handle division by zero as needed
+    }
+    return 1 / x;
+}
+
 int square(int x){
 	return x*x;
 }
@@ -78,8 +86,8 @@ int main() {
                 break;
             case 'i':
                 printf("Enter an integer: ");
-                scanf("%d", &a);
-                printf("Will be implemented soon...\n");
+                scanf("%d", &x);
+                printf("inverse of %d is %f\n",x,inverse(x));
                 break;
             default:
                 printf("Invalid operation. Please try again.\n");
